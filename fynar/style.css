@@ -1,0 +1,100 @@
+/* Configurações Gerais */
+:root {
+    --bg: #ffffff;
+    --fg: #111111;
+    --accent: #f8f8f8;
+    --gray: #767676;
+    --container-width: 1100px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--fg); line-height: 1.5; }
+.container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; }
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+/* Header */
+.main-header {
+    padding: 25px 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 100;
+}
+
+.header-grid { display: flex; justify-content: space-between; align-items: center; }
+.logo { height: 40px; }
+.main-nav ul { display: flex; list-style: none; gap: 30px; }
+.main-nav a { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; }
+.header-actions { display: flex; gap: 20px; align-items: center; }
+
+/* Hero */
+.hero { padding: 80px 0; background: var(--accent); }
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; }
+.label { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--gray); }
+.hero-text h1 { font-family: 'Playfair Display', serif; font-size: 3.2rem; margin: 15px 0; font-weight: 400; }
+.hero-text p { font-size: 1.1rem; color: var(--gray); margin-bottom: 30px; max-width: 450px; }
+.btn-dark { background: var(--fg); color: #fff; padding: 15px 35px; border-radius: 4px; display: inline-block; font-size: 14px; }
+
+.mascote-container { text-align: right; }
+.mascote { width: 320px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+
+/* Vitrine (Grid Profissional) */
+.section-header { text-align: center; margin: 80px 0 40px; }
+.section-header h2 { font-family: 'Playfair Display', serif; font-size: 2rem; }
+
+.product-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Cards menores */
+    gap: 30px; 
+    margin-bottom: 80px;
+}
+
+.product-card { transition: 0.3s; }
+.product-thumb { 
+    background: #f9f9f9; 
+    position: relative; 
+    overflow: hidden; 
+    height: 320px; 
+}
+.product-thumb img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+.product-card:hover img { transform: scale(1.05); }
+
+.quick-add { 
+    position: absolute; bottom: -50px; left: 0; width: 100%; 
+    background: var(--fg); color: #fff; border: none; padding: 12px; 
+    transition: 0.3s; cursor: pointer;
+}
+.product-card:hover .quick-add { bottom: 0; }
+
+.product-details { padding: 15px 0; }
+.category { font-size: 10px; text-transform: uppercase; color: var(--gray); }
+.product-details h3 { font-size: 16px; margin: 5px 0; font-weight: 400; }
+.price { font-weight: 600; margin-top: 10px; }
+
+/* Swatches de Cores */
+.color-swatches { display: flex; gap: 8px; margin: 10px 0; }
+.swatch { width: 14px; height: 14px; border-radius: 50%; border: 1px solid #ddd; cursor: pointer; }
+.black { background: #000; } .beige { background: #e5d3b3; } .lilac { background: #dcd0ff; }
+.green { background: #556b2f; } .blue { background: #4682b4; }
+
+/* Personalizados */
+.cta-personalizado { background: #111; color: #fff; padding: 80px 0; text-align: center; }
+.btn-outline { border: 1px solid #fff; color: #fff; padding: 12px 30px; display: inline-block; margin-top: 20px; }
+
+/* Rodapé */
+.main-footer { background: #fcfcfc; padding: 60px 0 20px; border-top: 1px solid #eee; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+.footer-logo { height: 35px; margin-bottom: 20px; }
+.footer-nav h4, .footer-contact h4 { font-size: 14px; margin-bottom: 20px; text-transform: uppercase; }
+.footer-nav ul { list-style: none; }
+.footer-nav li { margin-bottom: 10px; color: var(--gray); font-size: 14px; }
+.footer-bottom { border-top: 1px solid #eee; margin-top: 40px; padding-top: 20px; text-align: center; font-size: 12px; color: #999; }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-grid { grid-template-columns: 1fr; text-align: center; }
+    .hero-text h1 { font-size: 2.2rem; }
+    .mascote-container { order: -1; text-align: center; }
+    .footer-grid { grid-template-columns: 1fr; text-align: center; }
+}
