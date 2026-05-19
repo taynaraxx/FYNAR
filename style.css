@@ -23,7 +23,8 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 }
 
 .header-grid { display: flex; justify-content: space-between; align-items: center; }
-.logo { height: 40px; }
+.logo-area { display: flex; align-items: center; }
+.logo { height: 48px; width: auto; display: block; max-height: 48px; }
 .main-nav ul { display: flex; list-style: none; gap: 30px; }
 .main-nav a { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; }
 .header-actions { display: flex; gap: 20px; align-items: center; }
